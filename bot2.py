@@ -1,6 +1,7 @@
 # This example requires the 'message_content' intent.
 
 import discord
+import os
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -47,4 +48,6 @@ async def on_message(message):
     if message.content.startswith('아저씨 뚱뚱해요?'):
         await message.channel.send('어? 나 뚱뚱해?')            
 
-client.run('MTEzNDQxNDA4NDcyMTM1MjcyNA.GtKoif.drEcECGsCNHe4BeVZkjPIV2G2IEe3obV7LejJs')
+
+access_token = os. environ["Bot_TOKEN"]
+client.run('assess_TOKEN')
